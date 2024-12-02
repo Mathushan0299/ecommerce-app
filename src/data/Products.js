@@ -1,0 +1,111 @@
+
+const products = [
+    {
+      id: 1,
+      name: "Laptop",
+      price: 200000,
+      description: "High-performance laptop for work and play.",
+      image: "lap.jpg",
+    },
+    {
+      id: 2,
+      name: "Smartphone",
+      price: 50000,
+      description: "Latest model with advanced features.",
+      image: "pho.jpg",
+    },
+    {
+      id: 3,
+      name: "Headphones",
+      price: 10000,
+      description: "Noise-canceling over-ear headphones.",
+      image: "hed.jpg",
+    },
+    {
+      id: 4,
+      name: "Smartwatch",
+      price: 20000,
+      description: "Fitness tracker and smart notifications.",
+      image: "smat.jpg",
+    },
+    {
+      id: 5,
+      name: "Tablet",
+      price: 35000,
+      description: "Portable tablet for work and entertainment.",
+      image: "tap.jpg",
+    },
+    {
+      id: 6,
+      name: "Gaming Console",
+      price: 40000,
+      description: "Next-gen gaming console with 4K support.",
+      image: "gam.jpg",
+    },
+    {
+      id: 7,
+      name: "Bluetooth Speaker",
+      price: 80000,
+      description: "Portable wireless speaker with great sound.",
+      image: "spe.jpg",
+    },
+    {
+      id: 8,
+      name: "Camera",
+      price: 600000,
+      description: "High-quality camera for professional photography.",
+      image: "cam.jpg",
+    },
+    {
+      id: 9,
+      name: "Wireless Mouse",
+      price: 3000,
+      description: "Ergonomic wireless mouse for smooth navigation.",
+      image: "mou.jpg",
+    },
+    {
+      id: 10,
+      name: "Keyboard",
+      price: 5000,
+      description: "Mechanical keyboard with RGB lighting.",
+      image: "key.jpg",
+    },
+    {
+      id: 11,
+      name: "VR Headset",
+      price: 300000,
+      description: "Virtual reality headset for immersive experiences.",
+      image: "vr.jpg",
+    },
+    {
+      id: 12,
+      name: "Electric Toothbrush",
+      price: 9000,
+      description: "Rechargeable electric toothbrush with advanced features.",
+      image: "tee.jpg",
+    },
+    {
+      id: 13,
+      name: "Wireless Earbuds",
+      price: 12000,
+      description: "Compact and high-quality wireless earbuds.",
+      image: "er.jpg",
+    },
+    {
+      id: 14,
+      name: "Power Bank",
+      price: 4000,
+      description: "Portable power bank for charging on the go.",
+      image: "pow.jpg",
+    },
+    {
+      id: 15,
+      name: "Laptop Stand",
+      price: 2500,
+      description: "Adjustable stand for better ergonomic laptop use.",
+      image: "sta.jpg",
+    },
+  ];
+  
+  export default products;
+  

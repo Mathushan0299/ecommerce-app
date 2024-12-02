@@ -1,18 +1,84 @@
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center align the cards */
+}
+
+.product-card {
+  border: 1px solid #cf1818;
+  padding: 20px;
+  text-align: center;
+  width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 3D shadow effect */
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg); /* Initial 3D position */
+  transition: transform 0.5s, box-shadow 0.5s; /* Smooth animation for 3D and shadow */
+}
+
+.product-card:hover {
+  transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) scale(1.05); /* Tilt on hover */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s; /* Smooth animation for the image */
+}
+
+.product-card img:hover {
+  transform: scale(1.2); /* Zoom in the image on hover */
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.product-card button {
+  background-color: #007bff; /* Initial blue color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease; /* Smooth transition */
+}
+
+.product-card button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.product-card button.clicked {
+  background-color: #28a745; /* Green when clicked */
+  cursor: not-allowed; /* Disable further clicks */
+}
+
+.product-card button:disabled {
+  opacity: 0.6;
+}
+
+/* Add a subtle hover animation to the entire card */
+@keyframes hoverEffect {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  
-  .product-card {
-    border: 1px solid #cf1818;
-    padding: 10px;
-    text-align: center;
-    width: 200px;
+  50% {
+    transform: translateY(-5px);
   }
-  
-  .product-card img {
-    width: 100px;
-    height: 100px;
-  }
-  
+}
+
+.product-card:hover {
+  animation: hoverEffect 0.5s ease-in-out;
+}

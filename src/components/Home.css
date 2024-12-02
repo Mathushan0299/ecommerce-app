@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../../public/vrs.webp'); /* Use your own image */
+    background-size: cover;
+    background-position: center;
+    color: rgb(14, 3, 3);
+  }
+  
+  .home-container h1 {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Align the shop name to the left corner */
+    font-size: 3rem;
+    margin: 0;
+    color: #e70b1d; /* Royal purple */
+    font-family: 'Georgia', serif; /* Adds a more royal look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: royal-glow 3s infinite; /* Add animation */
+  }
+  
+  .home-container p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-align: absolute; /* Ensures description text is centered */
+  }
+  
+  .home-links {
+    position: absolute;
+    top: 00px;
+    right: 50px; /* Position buttons in the top-right corner */
+  }
+  
+  .home-btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: rgba(106, 13, 173, 0.9); /* Royal purple semi-transparent button */
+    color: rgb(241, 239, 239);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .home-btn:hover {
+    background-color: rgba(85, 0, 170, 0.9); /* Darker purple on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  /* Add animation for shop name */
+  @keyframes royal-glow {
+    0% {
+      text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad, 0 0 20px #6a0dad;
+    }
+    50% {
+      text-shadow: 0 0 10px #6a0dad, 0 0 20px #aa00ff, 0 0 30px #aa00ff;
+    }
+    100% {
+      text-shadow: 0 0 5px #6a0dad, 0 0 10px #6a0dad, 0 0 20px #6a0dad;
+    }
+  }
+  

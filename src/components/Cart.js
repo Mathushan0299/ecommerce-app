@@ -1,4 +1,4 @@
-// src/components/Cart.js
+
 import React from "react";
 import { useCart } from "../context/CartContext";
 import "./Cart.css";
@@ -21,7 +21,7 @@ const Cart = () => {
                   <h3>{item.name}</h3>
                   <p>Price: ${item.price}</p>
                   <p>Total: ${item.price * item.quantity}</p>
-                  <div>
+                  <div className="quantity-controls">
                     <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>
                       -
                     </button>
@@ -30,7 +30,9 @@ const Cart = () => {
                       +
                     </button>
                   </div>
-                  <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                  <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+                    Remove
+                  </button>
                 </div>
               </li>
             ))}

@@ -1,6 +1,6 @@
-// src/components/Auth/Register.js
+
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate for redirection
+import { useNavigate } from "react-router-dom";  
 import "./Auth.css";
 
 const Register = () => {
@@ -11,7 +11,7 @@ const Register = () => {
   });
   const [errors, setErrors] = useState({});
   
-  // Initialize useNavigate hook
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -41,7 +41,7 @@ const Register = () => {
     } else {
       setErrors({});
       alert("Registration Successful!");
-      // Redirect to the Login page after successful registration
+      
       navigate("/login");
     }
   };
@@ -81,7 +81,7 @@ const Register = () => {
           Register
         </button>
       </form>
-      <p>Already have an account? <a href="/login">Login</a></p> {/* Link to Login page */}
+      <p>Already have an account? <a href="/login">Login</a></p> 
     </div>
   );
 };

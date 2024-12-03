@@ -1,6 +1,6 @@
-// src/components/Auth/Login.js
+
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate for redirection
+import { useNavigate } from "react-router-dom";  
 import "./Auth.css";
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
   });
   const [errors, setErrors] = useState({});
   
-  // Initialize useNavigate hook
+  
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -39,8 +39,8 @@ const Login = () => {
     } else {
       setErrors({});
       alert("Login Successful!");
-      // After successful login, redirect to the Product List page
-      navigate("/ProductList");  // Corrected the route name to match ProductList
+      
+      navigate("/ProductList");  
     }
   };
 
@@ -70,7 +70,7 @@ const Login = () => {
           Login
         </button>
       </form>
-      <p>Don't have an account? <a href="/register">Register</a></p> {/* Link to Register page */}
+      <p>Don't have an account? <a href="/register">Register</a></p> 
     </div>
   );
 };

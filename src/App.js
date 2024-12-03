@@ -1,11 +1,10 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import Login from "./components/Auth/Login"; // Corrected path
-import Register from "./components/Auth/Register"; // Corrected path
-import Home from "./components/Home"; // Corrected path
-import ProductList from "./components/Auth/ProductList"; // Corrected path
+import Login from "./components/Auth/Login"; 
+import Register from "./components/Auth/Register"; 
+import Home from "./components/Home"; 
+import ProductList from "./components/Auth/ProductList";
 import Cart from "./components/Cart";
 
 function App() {
@@ -13,10 +12,10 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />        {/* Home Page Route */}
-          <Route path="/login" element={<Login />} />  {/* Login Page Route */}
-          <Route path="/register" element={<Register />} />  {/* Register Page Route */}
-          <Route path="/ProductList" element={<ProductList />} />  {/* Product List Page Route */}
+          <Route path="/" element={<Home />} />        
+          <Route path="/login" element={<Login />} />  
+          <Route path="/register" element={<Register />} />  
+          <Route path="/ProductList" element={<ProductList />} />  
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>

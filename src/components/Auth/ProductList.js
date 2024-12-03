@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import products from "../../data/Products"; // Assuming products data is stored in data folder
-import { useCart } from "../../context/CartContext"; // Context for cart functionality
-import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import products from "../../data/Products"; 
+import { useCart } from "../../context/CartContext"; 
+import { useNavigate } from "react-router-dom"; 
 import "./ProductList.css";
 
 const ProductList = () => {
   const { addToCart } = useCart();
-  const navigate = useNavigate(); // Initialize useNavigate hook
-  const [clickedButtons, setClickedButtons] = useState({}); // Track clicked button states
+  const navigate = useNavigate(); 
+  const [clickedButtons, setClickedButtons] = useState({}); 
 
   const handleAddToCart = (product) => {
-    addToCart(product); // Add product to cart
+    addToCart(product); 
 
-    // Toggle button state for the clicked product
+    
     setClickedButtons((prevState) => ({
       ...prevState,
       [product.id]: true,
     }));
 
-    // Redirect to the Cart page
+    
     setTimeout(() => {
       navigate("/cart");
-    }, 500); // Add slight delay for UX
+    }, 500); 
   };
 
   return (
@@ -35,7 +35,7 @@ const ProductList = () => {
           <button
             className={clickedButtons[product.id] ? "clicked" : ""}
             onClick={() => handleAddToCart(product)}
-            disabled={clickedButtons[product.id]} // Disable button after click
+            disabled={clickedButtons[product.id]} 
           >
             {clickedButtons[product.id] ? "Added to Cart" : "Add to Cart"}
           </button>
